@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  year: 1
+  played: 1
+  won: 1
+  lost: 1
+  drawn: 1
+  tied: 1
+  noresult: 1
+  maxpossiblegames: 1
+
+two:
+  year: 1
+  played: 1
+  won: 1
+  lost: 1
+  drawn: 1
+  tied: 1
+  noresult: 1
+  maxpossiblegames: 1
