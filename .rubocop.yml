@@ -2368,7 +2368,7 @@ Metrics/AbcSize:
   # a Float.
   IgnoredMethods: []
   CountRepeatedAttributes: true
-  Max: 17
+  Max: 21 #MAW: was 17
 
 Metrics/BlockLength:
   Description: "Avoid long blocks with many lines."
