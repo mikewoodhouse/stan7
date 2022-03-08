@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'importer'
 require 'excel_averages_importer'
 
