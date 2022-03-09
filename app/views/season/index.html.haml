@@ -1,3 +1,24 @@
-%h1 Season#index
-- for season in @seasons
-    = season.year
+%h1.text-3xl.font-bold Seasons
+%div
+    %table.border-collapse.border
+        %thead
+            %tr
+                %th.text-center year
+                %th.text-center played
+                %th.text-center won
+                %th.text-center lost
+                %th.text-center drawn
+                %th.text-center tied
+                %th.text-center no<br/>result
+                %th.text-center max<br/> possible<br/>games
+        %tbody
+            - for season in @seasons.reverse
+                %tr.border
+                    %td.text-center.w-20= season.year
+                    %td.text-center.w-20= season.played
+                    %td.text-center.w-20= season.won
+                    %td.text-center.w-20= season.lost
+                    %td.text-center.w-20= season.drawn
+                    %td.text-center.w-20= season.tied
+                    %td.text-center.w-20= season.noresult
+                    %td.text-center.w-20= season.maxpossiblegames
