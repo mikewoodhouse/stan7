@@ -1,0 +1,49 @@
+%h1.text-3xl.font-bold Season Records
+%div
+    %table.border-collapse.border
+        %thead
+            %tr
+                %th{rowspan: 2} Year
+                %th{colspan: 16} Trinity
+                %th{colspan: 16} Opponents
+            %tr
+                - 2.times do
+                    %th.text-center runs<br/>scored
+                    %th.text-center wickets<br/>lost
+                    %th.text-center highest
+                    %th.text-center highest<br/>wkts
+                    %th.text-center highest<br/>date
+                    %th.text-center highest<br/>opps
+                    %th.text-center lowest
+                    %th.text-center lowest<br/>wkts
+                    %th.text-center lowest<br/>date
+                    %th.text-center lowest<br/>opps
+                    %th.text-center byes
+                    %th.text-center legbyes
+                    %th.text-center wides
+                    %th.text-center noballs
+                    %th.text-center balls<br/>bowled
+                    %th.text-center balls<br/>received
+        %tbody
+            - @season_records.keys.reverse.each do |year|
+                - year_record = @season_records[year]
+                %tr.border
+                    %td.text-center= year
+                    - ['TCC', 'Opp'].each do |club|
+                        - club_record = year_record[club]
+                        %td.text-center= club_record.runsscored
+                        %td.text-center= club_record.wicketslost
+                        %td.text-center= club_record.highest
+                        %td.text-center= club_record.highestwkts
+                        %td.text-center= club_record.highestdate
+                        %td.text-center= club_record.highestopps
+                        %td.text-center= club_record.lowest
+                        %td.text-center= club_record.lowestwkts
+                        %td.text-center= club_record.lowestdate
+                        %td.text-center= club_record.lowestopps
+                        %td.text-center= club_record.byes
+                        %td.text-center= club_record.legbyes
+                        %td.text-center= club_record.wides
+                        %td.text-center= club_record.noballs
+                        %td.text-center= club_record.ballsbowled
+                        %td.text-center= club_record.ballsreceived
